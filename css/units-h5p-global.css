@@ -29,6 +29,22 @@
   box-sizing: border-box;
 }
 
+.h5p-content p,
+.h5p-content li,
+.h5p-content ul,
+.h5p-content ol,
+.h5p-content td,
+.h5p-content th,
+.h5p-content a,
+.h5p-content .title,
+.h5p-content [role="status"],
+.h5p-advanced-text p,
+.h5p-advanced-text li,
+.h5p-advanced-text ul,
+.h5p-advanced-text ol,
+.h5p-advanced-text td,
+.h5p-advanced-text th,
+.h5p-advanced-text a,
 .h5p-interactive-book-content p,
 .h5p-interactive-book-content li,
 .h5p-interactive-book-content ul,
@@ -43,40 +59,58 @@
   font-weight: 300;
 }
 
+.h5p-content h1,
+.h5p-content h2,
+.h5p-content h3,
+.h5p-advanced-text h1,
+.h5p-advanced-text h2,
+.h5p-advanced-text h3,
 .h5p-interactive-book-content h1,
 .h5p-interactive-book-content h2,
 .h5p-interactive-book-content h3,
 .h5p-question-introduction,
 .h5p-dragquestion-introduction {
-  color: var(--units-h5p-primary);
-  font-family: var(--units-h5p-font);
-  font-weight: 700;
+  color: var(--units-h5p-primary) !important;
+  font-family: var(--units-h5p-font) !important;
+  font-weight: 700 !important;
 }
 
+.h5p-content h1,
+.h5p-advanced-text h1,
 .h5p-interactive-book-content h1 {
   margin-bottom: 1rem;
   font-size: 2.4rem;
   line-height: 1.15;
 }
 
+.h5p-content h2,
+.h5p-advanced-text h2,
 .h5p-interactive-book-content h2 {
   margin-bottom: 0.85rem;
   font-size: 1.85rem;
   line-height: 1.2;
 }
 
+.h5p-content h3,
+.h5p-advanced-text h3,
 .h5p-interactive-book-content h3 {
   margin-bottom: 0.7rem;
   font-size: 1.45rem;
   line-height: 1.25;
 }
 
+.h5p-content p,
+.h5p-advanced-text p,
 .h5p-interactive-book-content p {
   margin-bottom: 1rem;
   font-size: 1.22rem;
   line-height: 1.55;
 }
 
+.h5p-content ul,
+.h5p-content ol,
+.h5p-advanced-text ul,
+.h5p-advanced-text ol,
 .h5p-interactive-book-content ul,
 .h5p-interactive-book-content ol {
   padding-left: 1.4rem;
@@ -84,10 +118,16 @@
   line-height: 1.55;
 }
 
+.h5p-content li,
+.h5p-advanced-text li,
 .h5p-interactive-book-content li {
   margin-bottom: 0.55rem;
 }
 
+.h5p-content ul li::marker,
+.h5p-content ol li::marker,
+.h5p-advanced-text ul li::marker,
+.h5p-advanced-text ol li::marker,
 .h5p-interactive-book-content ul li::marker,
 .h5p-interactive-book-content ol li::marker {
   color: var(--units-h5p-primary);
@@ -97,11 +137,15 @@
   list-style-type: disc;
 }
 
+.h5p-content a,
+.h5p-advanced-text a,
 .h5p-interactive-book-content a {
   color: var(--units-h5p-primary);
   text-decoration: underline;
 }
 
+.h5p-content strong,
+.h5p-advanced-text strong,
 .h5p-interactive-book-content strong {
   color: var(--units-h5p-primary);
   font-weight: 700;
