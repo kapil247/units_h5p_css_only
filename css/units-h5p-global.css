@@ -4,8 +4,7 @@
 :root {
   --units-h5p-primary: #2b65af;
   --units-h5p-accent: #bb7537;
-  --units-h5p-text: #0047ff;
-  --units-h5p-heading-test: #ff0000;
+  --units-h5p-text: #000000;
   --units-h5p-ink: #162033;
   --units-h5p-surface: #ffffff;
   --units-h5p-soft-blue: #eaf0f7;
@@ -49,7 +48,7 @@
 .h5p-interactive-book-content h3,
 .h5p-question-introduction,
 .h5p-dragquestion-introduction {
-  color: var(--units-h5p-heading-test);
+  color: var(--units-h5p-primary);
   font-family: var(--units-h5p-font);
   font-weight: 700;
 }
