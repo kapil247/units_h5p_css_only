@@ -6,6 +6,7 @@
   --units-h5p-accent: #bb7537;
   --units-h5p-text: #000000;
   --units-h5p-ink: #162033;
+  --units-h5p-page-bg: #bb7537;
   --units-h5p-surface: #ffffff;
   --units-h5p-soft-blue: #eaf0f7;
   --units-h5p-border: rgba(43, 101, 175, 0.18);
@@ -21,6 +22,48 @@
 .h5p-interactive-book-content {
   color: var(--units-h5p-text);
   font-family: var(--units-h5p-font);
+}
+
+html,
+body,
+.h5p-content,
+.h5p-container,
+.h5p-interactive-book {
+  background: #ffffff !important;
+}
+
+.h5p-interactive-book-main,
+.h5p-interactive-book-content,
+.h5p-interactive-book-chapter,
+.h5p-interactive-book-chapter-content {
+  background: var(--units-h5p-page-bg) !important;
+}
+
+.h5p-interactive-book-navigation,
+.h5p-interactive-book-status-header,
+.h5p-interactive-book-toolbar,
+.h5p-interactive-book-footer,
+.h5p-interactive-book .navigation,
+.h5p-interactive-book [class*="navigation"],
+.h5p-interactive-book [class*="toolbar"],
+.h5p-interactive-book [class*="header"] {
+  background: #ffffff !important;
+}
+
+.h5p-column-content.h5p-advanced-text,
+.h5p-interactive-book-chapter .h5p-advanced-text {
+  background: var(--units-h5p-surface) !important;
+}
+
+.h5p-interactive-book-chapter-content,
+.h5p-interactive-book-chapter .h5p-column {
+  min-height: calc(100vh - 150px);
+}
+
+.h5p-interactive-book-chapter .h5p-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .h5p-content *,
@@ -237,11 +280,21 @@
 }
 
 .h5p-column-box-container {
-  padding: 0;
+  padding: 28px 36px;
   border: 0;
   border-radius: 0 !important;
   background: #ffffff;
-  box-shadow: 0 20px 60px rgba(20, 38, 77, 0.1);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.h5p-interactive-book-chapter .h5p-column,
+.h5p-interactive-book-chapter .h5p-column-content {
+  background: transparent !important;
+}
+
+.h5p-interactive-book-chapter .h5p-column-content.h5p-image,
+.h5p-interactive-book-chapter .h5p-image {
+  background: transparent !important;
 }
 
 .h5p-column-content.h5p-accordion {
@@ -825,6 +878,15 @@
 }
 
 @media (max-width: 700px) {
+  .h5p-interactive-book-chapter-content,
+  .h5p-interactive-book-chapter .h5p-column {
+    min-height: auto;
+  }
+
+  .h5p-interactive-book-chapter .h5p-column {
+    justify-content: flex-start;
+  }
+
   .h5p-interactive-book-content h1 {
     font-size: 2rem;
   }
